@@ -88,6 +88,52 @@ void for_loop() {
     cout << endl << endl;
 }
 
+void while_loop_example() {
+    int searched = 5;
+    int given = -1;
+
+    cout << "This is a simple guessing game:" << endl;
+    
+
+    while (searched != given) {
+        cout << "Please enter a number: ";
+        cin >> given;
+
+        cout << "Thank you for your guess..." << endl;
+    }
+
+    cout << "You found the correct number! Goodbye!" << endl << endl;
+}
+
+void while_loop_continue_break() {
+    cout << "Countdown from 10 to 0 (continue at 7 and break < 5)" << endl;
+    
+    int count = 10;  // The start value
+    int destination = 0;  // the destination
+
+    // This while will normally terminate when count reaches the destination-value
+    while (count > destination) 
+    {  
+        if (count == 7) { // If count will turn into 7...
+            cout << "skipped... ";
+            count--;
+            continue; //... the while-loop will skip to the next iteration due to the "continue"-statement.
+        }
+
+        if (count < 5) // If count falls below 5...
+        {
+            cout << "aborted... ";
+            break; //... the while-loop will be aborted due to the "abort"-statement.
+        }
+
+        cout << count << " ";  //Note, that this will also execute when target is reached
+    
+        count--;
+    }
+
+    cout << endl << endl;
+}
+
 int main()
 {
     if_else_example();
@@ -95,6 +141,8 @@ int main()
     for_each_loop_write_into();
     for_each_loop_copy_method();
     for_loop();
+    while_loop_example();
+    while_loop_continue_break();
 
     return 0;
 }
