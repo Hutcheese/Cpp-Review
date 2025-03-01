@@ -1,7 +1,7 @@
 #include <iostream> 
 using namespace std; 
-int main() 
-{     
+
+void pointer_demonstraion() {
     int a = 5;  //Declare and initialize a variable
     /*  The following pointer declarations are all valid and they all are doing the same:
             Declaring a new pointer and initializing it with 0 (a non accessible memory address) for safety-reasons.
@@ -44,6 +44,23 @@ int main()
     char* p2;
     // p2 = p1; // Valid in C but not C++
     p2 = (char*) p1; // In C++ we have to typecast the pointer!
+}
 
+void pointer_to_a_pointer() {
+    cout << "-------Pointer to a Pointer------" << endl;
+    cout << "char * p = \"Hello World!\";" << endl;
+    cout << "char ** p1 = &p;" << endl;
+    cout << "cout << *p1 << endl;" << endl;
+
+    char * p = "Hello World!";
+    char ** p1 = &p;
+    cout << *p1 << endl;
+    cout << endl;
+}
+
+int main() 
+{     
+    pointer_demonstraion();
+    pointer_to_a_pointer();
     return 0;        
 }
