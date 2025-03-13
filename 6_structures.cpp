@@ -10,6 +10,7 @@ struct Person {
     bool programs;
 }; // Don't forget the semicolon to terminate the structure definition
 
+// NOTE: Structs are public by default, members of classes are private by default
 
 void initialize_and_print_structs() {
     // Declaring person 
